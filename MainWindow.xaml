@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_d_une_biblio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1000">
+        Title="Gestion d'une bibliothèque" Height="600" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Height="106" Margin="-10,0,10,0">
+            <TextBlock Text="BIENVENUE" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+        </StackPanel>
+
+        <Label Content="Email:" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="txtEmail" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Height="30" Width="200"/>
+
+        <Label Content="Password:" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <PasswordBox x:Name="txtPassword" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Height="30" Width="200"/>
+
+        <Button Content="Se connecter" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Height="40" Width="150" Background="Green" Foreground="White" Click="Login_Click"/>
+
+        <Button Content="Quitter" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Height="40" Width="150" Background="Red" Foreground="White" Click="Quit_Click"/>
+
+        <TextBlock x:Name="txtMessage" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" Foreground="Red" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="145" Margin="91,21,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.47,0.527" Source="/book.png"/>
+        <Image HorizontalAlignment="Left" Height="86" Margin="612,39,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="129" Source="/emsi.png"/>
     </Grid>
 </Window>
